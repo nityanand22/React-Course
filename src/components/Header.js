@@ -1,10 +1,10 @@
-import { foodlogo } from "../../images/foodlogo.jpg";
+import { FOOD_LOGO } from "../utils/constants";
 
 const Header = () => {
   return (
     <div className="header">
       <div className="logo-container">
-        <img className="logo" src={foodlogo} alt="food logo" />
+        <img className="logo" src={FOOD_LOGO} alt="food logo" />
       </div>
       <div className="nav-items">
         <ul>

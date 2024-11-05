@@ -1,4 +1,4 @@
-import { LOGO_URL } from "../utils/logo";
+import { LOGO_URL } from "../utils/constants";
 
 const RestaurantCard = (props) => {
   const { resData } = props;
