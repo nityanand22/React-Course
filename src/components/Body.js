@@ -1,11 +1,9 @@
 import RestaurantCard from "./RestaurantCard";
-// import resList from "../utils/mockData";
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
 
 const Body = () => {
-  // let [listOfRestaurants, setListOfRestaurants] = useState(resList);
-  let [listOfRestaurants, setListOfRestaurants] = useState([]);
+  const [listOfRestaurants, setListOfRestaurants] = useState([]);
   const [filteredRestaurant, setFilteredRestaurant] = useState([]);
 
   const [searchText, setSearchText] = useState("");
@@ -35,7 +33,7 @@ const Body = () => {
         <div className="search">
           <input
             type="text"
-            className="search-box"
+            className="searchBox"
             value={searchText}
             onChange={(e) => {
               setSearchText(e.target.value);
@@ -44,9 +42,9 @@ const Body = () => {
           <button
             className="search-btn"
             onClick={() => {
-              const filteredRestaurant = listOfRestaurants.filter((res) => {
-                res.info.name.toLowerCase().includes(searchText.toLowerCase());
-              });
+              const filteredRestaurant = listOfRestaurants.filter((res) =>
+                res.info.name.toLowerCase().includes(searchText.toLowerCase())
+              );
               setFilteredRestaurant(filteredRestaurant);
             }}
           >
