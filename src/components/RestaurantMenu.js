@@ -16,6 +16,9 @@ const RestaurantMenu = () => {
     setResInfo(json?.data?.cards[2]?.card?.card?.info);
   };
 
+  const { itemCards } =
+    json?.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle?.offers;
+
   return resInfo === null ? (
     <Shimmer />
   ) : (
